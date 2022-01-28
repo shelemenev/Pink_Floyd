@@ -3,8 +3,11 @@
   src: url(fonts/Roboto-LightItalic.ttf);
 }
 
-*, html, body {
+html, body {
   background-color: black;
+}
+
+*, html, body {
   margin: 0px;
   padding: 0px;
   border: 0px;
@@ -36,7 +39,7 @@ iframe {
   margin-top: 45px;
   width: 460px;
   height: 320px;
-  border-radius: 25px;
+  border-radius: 20px;
   border: 1px solid red;
 }
 
@@ -44,6 +47,7 @@ ol {
   margin-left: 70px;
   margin-top: 5px;
   font-size: 18px;
+  width: 310px;
 }
 
 img {
@@ -111,10 +115,6 @@ a:hover {
   margin-left: 530px;
 }
 
-.big {
- transform: scale(2);
-}
-
 .tags {
   font-size: 18px;
   margin-top: 100px;
@@ -124,4 +124,30 @@ a:hover {
 
 .saucer {
   margin-left: 180px;
+}
+
+.more {
+  margin-left: 170px;
+}
+
+.popup {
+  background-color: black;
+  opacity: 0.8;
+  position: fixed;
+}
+
+.popup_container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup_image {
+  border-radius: 20px;
+  border: 1px solid red;
 }
