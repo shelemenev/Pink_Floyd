@@ -3,8 +3,8 @@ function init() {
 let image = document.querySelectorAll('img')
 
 for (let j = 0, lj = image.length; j < lj; j++)
-  image [j].onclick = function () {
-    showPopup(this)
+  image[j].onclick = function () {
+    showPopup(image, j)
   }
 }
 
@@ -16,7 +16,10 @@ function closePopup() {
   popup.style.display = 'none'
 }
 
-function showPopup(img) {
+function showPopup(images, index) {
+  if (index < 0) index = images.length - 1
+  if (index >= images.length) index = 0
+
   let popup = document.querySelector('.popup')
 
   if (!popup) {
@@ -35,7 +38,24 @@ function showPopup(img) {
   }
 
   const size = window.innerWidth / 3
-  popupContainer.innerHTML = `<img style="width: ${size}px; height: ${size}px" onclick="closePopup()" src="${img.src}" class="popup_image">`
+  const left = document.createElement('div')
+  left.onclick = () => showPopup(images, index - 1)
+  left.innerHTML = 'LEFT'
+  left.className = 'button_left'
+  const right = document.createElement('div')
+  right.onclick = () => showPopup(images, index + 1)
+  right.innerHTML = 'RIGHT'
+  right.className = 'button_right'
+  const img = document.createElement('img')
+  img.style.width = `${size}px`
+  img.style.height = `${size}px`
+  img.onclick = () => closePopup()
+  img.src = images[index].src
+  img.className = 'popup_image'
+  popupContainer.innerHTML = ''
+  popupContainer.appendChild(left)
+  popupContainer.appendChild(img)
+  popupContainer.appendChild(right)
   popupContainer.style.display = 'flex'
   popup.style.display = 'flex'
 }
