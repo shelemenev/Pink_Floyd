@@ -40,11 +40,11 @@ function showPopup(images, index) {
   const size = window.innerWidth / 3
   const left = document.createElement('div')
   left.onclick = () => showPopup(images, index - 1)
-  left.innerHTML = 'LEFT'
+  left.innerHTML = "<img src='images/arrow_left.png'>"
   left.className = 'button_left'
   const right = document.createElement('div')
   right.onclick = () => showPopup(images, index + 1)
-  right.innerHTML = 'RIGHT'
+  right.innerHTML = "<img src='images/arrow_left.png' style='transform:rotate(180deg)'>"
   right.className = 'button_right'
   const img = document.createElement('img')
   img.style.width = `${size}px`
@@ -58,4 +58,9 @@ function showPopup(images, index) {
   popupContainer.appendChild(right)
   popupContainer.style.display = 'flex'
   popup.style.display = 'flex'
+  const cross = document.createElement('div')
+  cross.onclick = () => closePopup()
+  cross.innerHTML = "<img src='images/cross.png'>"
+  cross.className = 'cross'
+  popupContainer.appendChild(cross)
 }
