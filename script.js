@@ -1,14 +1,18 @@
+let images = []
+let index = 0
+
 function init() {
+images = document.querySelectorAll('img')
 
-let image = document.querySelectorAll('img')
-
-for (let j = 0, lj = image.length; j < lj; j++)
-  image[j].onclick = function () {
-    showPopup(image, j)
+for (let j = 0, lj = images.length; j < lj; j++)
+  images[j].onclick = function () {
+    index = j
+    showPopup()
   }
 }
 
 function closePopup() {
+  window.removeEventListener('keyup', logKey)
   let popup = document.querySelector('.popup')
   let popupContainer = document.querySelector('#popup_container')
 
@@ -16,7 +20,22 @@ function closePopup() {
   popup.style.display = 'none'
 }
 
-function showPopup(images, index) {
+function logKey(event) {
+  event.preventDefault()
+  event.stopPropagation()
+
+  if (event.key === 'ArrowRight') {
+    index = index + 1
+    showPopup()
+  }
+
+  if (event.key === 'ArrowLeft') {
+    index = index - 1
+    showPopup()
+  }
+}
+
+function showPopup() {
   if (index < 0) index = images.length - 1
   if (index >= images.length) index = 0
 
@@ -39,11 +58,17 @@ function showPopup(images, index) {
 
   const size = window.innerWidth / 3
   const left = document.createElement('div')
-  left.onclick = () => showPopup(images, index - 1)
+  left.onclick = () => {
+    index = index - 1
+    showPopup()
+  }
   left.innerHTML = "<img src='images/arrow_left.png'>"
   left.className = 'button_left'
   const right = document.createElement('div')
-  right.onclick = () => showPopup(images, index + 1)
+  right.onclick = () => {
+    index = index + 1
+    showPopup()
+  }
   right.innerHTML = "<img src='images/arrow_left.png' style='transform:rotate(180deg)'>"
   right.className = 'button_right'
   const img = document.createElement('img')
@@ -63,4 +88,7 @@ function showPopup(images, index) {
   cross.innerHTML = "<img src='images/cross.png'>"
   cross.className = 'cross'
   popupContainer.appendChild(cross)
+
+  window.removeEventListener('keyup', logKey)
+  window.addEventListener('keyup', logKey)
 }
