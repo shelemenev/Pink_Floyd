@@ -2,7 +2,7 @@ let images = []
 let index = 0
 
 function init() {
-images = document.querySelectorAll('img')
+images = document.querySelectorAll('.gallery')
 
 for (let j = 0, lj = images.length; j < lj; j++)
   images[j].onclick = function () {
@@ -67,6 +67,7 @@ function showPopup() {
     index = index - 1
     showPopup()
   }
+
   left.innerHTML = "<img src='images/arrow_left.png'>"
   left.className = 'button_left'
   const right = document.createElement('div')
@@ -74,6 +75,7 @@ function showPopup() {
     index = index + 1
     showPopup()
   }
+
   right.innerHTML = "<img src='images/arrow_left.png' style='transform:rotate(180deg)'>"
   right.className = 'button_right'
   const img = document.createElement('img')
