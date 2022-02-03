@@ -21,6 +21,7 @@ function closePopup() {
 }
 
 function logKey(event) {
+  console.log(event)
   event.preventDefault()
   event.stopPropagation()
 
@@ -32,6 +33,10 @@ function logKey(event) {
   if (event.key === 'ArrowLeft') {
     index = index - 1
     showPopup()
+  }
+
+  if (event.key === 'Escape') {
+    closePopup()
   }
 }
 
