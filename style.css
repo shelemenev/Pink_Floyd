@@ -12,6 +12,7 @@ html, body {
   padding: 0px;
   border: 0px;
   color: red;
+  justify-content: space-around;
 }
 
 body {
@@ -20,22 +21,20 @@ body {
 
 h1 {
   text-align: center;
-  padding-top: 20px;
   position: fixed;
   width: 100%;
 }
 
 p {
-  margin-left: 50px;
-  margin-right: 30px;
+  margin-left: 40px;
+  padding-right: 55px;
   margin-top: 45px;
-  font-size: 22px;
+  font-size: 19px;
   font-family: Roboto;
 }
 
 iframe {
   margin-left: 120px;
-  margin-right: 30px;
   margin-top: 45px;
   width: 460px;
   height: 320px;
@@ -43,11 +42,15 @@ iframe {
   border: 1px solid red;
 }
 
-ol {
-  margin-left: 70px;
+ol, ul {
+  margin-left: 56px;
   margin-top: 5px;
-  font-size: 18px;
-  width: 310px;
+  font-size: 16px;
+  width: 278px;
+}
+
+ul {
+  margin-left: 20px;
 }
 
 img {
@@ -56,6 +59,19 @@ img {
 
 a:hover {
   color: white;
+}
+
+.long {
+  width: 270px;
+  font-size: 18px;
+}
+
+.shit {
+  justify-content: left;
+}
+
+.plus {
+  padding-top: 20px;
 }
 
 .logo {
@@ -77,10 +93,10 @@ a:hover {
 }
 
 .picture {
-  width: 1000px;
-  height: 600px;
-  margin-left: 600px;
-  margin-top: 100px;
+  width: 50%;
+  margin-block: 4%;
+  margin-inline: 25%;
+  position: fixed;
 }
 
 .picture2 {
@@ -91,10 +107,10 @@ a:hover {
 }
 
 .picture3 {
-  width: 350px;
+  width: 300px;
   height: 300px;
-  margin-top: 50px;
-  margin-left: 40px;
+  margin-top: 40px;
+  margin-left: 42px;
   margin-right: 35px;
 }
 
@@ -102,7 +118,7 @@ a:hover {
   width: 250px;
   height: 250px;
   margin-top: 50px;
-  margin-left: 100px;
+  margin-left: 50px;
 }
 
 .content {
@@ -112,22 +128,13 @@ a:hover {
 
 .picup {
   margin-top: 100px;
-  margin-left: 530px;
 }
 
 .tags {
   font-size: 18px;
   margin-top: 100px;
-  margin-left: 100px;
+  margin-left: 50px;
   color: royalblue;
-}
-
-.saucer {
-  margin-left: 180px;
-}
-
-.more {
-  margin-left: 170px;
 }
 
 .popup {
