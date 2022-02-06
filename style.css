@@ -64,14 +64,23 @@ a:hover {
 .long {
   width: 270px;
   font-size: 18px;
+  margin-top: 20px;
 }
 
 .shit {
   justify-content: left;
 }
 
+.space {
+  justify-content: space-between;
+}
+
 .plus {
   padding-top: 20px;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .logo {
@@ -93,7 +102,7 @@ a:hover {
 }
 
 .picture {
-  width: 50%;
+  width: 0;
   margin-block: 4%;
   margin-inline: 25%;
   position: fixed;
@@ -119,6 +128,7 @@ a:hover {
   height: 250px;
   margin-top: 50px;
   margin-left: 50px;
+  padding-bottom: 50px;
 }
 
 .content {
@@ -128,6 +138,7 @@ a:hover {
 
 .picup {
   margin-top: 100px;
+  padding-right: 40px;
 }
 
 .tags {

@@ -2,10 +2,10 @@ let images = []
 let index = 0
 
 function init() {
-images = document.querySelectorAll('.gallery')
+  images = document.querySelectorAll('.gallery')
 
-for (let j = 0, lj = images.length; j < lj; j++)
-  images[j].onclick = function () {
+  for (let j = 0, lj = images.length; j < lj; j++)
+    images[j].onclick = function () {
     index = j
     showPopup()
   }
