@@ -171,25 +171,25 @@ a:hover {
 }
 
 .button_left img {
-  width: 78px;
-  height: 78px;
-  bottom: 40px;
+  width: 34px;
+  height: 34px;
+  bottom: 60px;
   left: calc(50% - 78px);
   position: absolute;
 }
 
 .button_right img {
-  width: 78px;
-  height: 78px;
-  bottom: 40px;
+  width: 34px;
+  height: 34px;
+  bottom: 60px;
   right: calc(50% - 78px);
   position: absolute;
 }
 
 .cross img {
-  width: 58px;
-  height: 58px;
-  top: 140px;
-  right: calc(33% - 29px);
+  width: 24px;
+  height: 24px;
+  top: 120px;
+  right: calc(33% - 24px);
   position: absolute;
 }
