@@ -16,5 +16,5 @@ function animation() {
 }
 
 function init() {
-  interval = setInterval(() => animation(), 40)
+  interval = setInterval(() => animation(), 100)
 }

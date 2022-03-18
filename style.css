@@ -1,6 +1,6 @@
 @font-face {
-  font-family: Roboto;
-  src: url(fonts/Roboto-LightItalic.ttf);
+  font-family: PoiretOne-Regular;
+  src: url(fonts/PoiretOne-Regular.ttf);
 }
 
 html, body {
@@ -11,8 +11,7 @@ html, body {
   margin: 0px;
   padding: 0px;
   border: 0px;
-  color: red;
-  justify-content: space-around;
+  color: lightcyan;
 }
 
 body {
@@ -29,8 +28,8 @@ p {
   margin-left: 40px;
   padding-right: 55px;
   margin-top: 45px;
-  font-size: 19px;
-  font-family: Roboto;
+  font-size: 22px;
+  font-family: PoiretOne-Regular;
 }
 
 iframe {
@@ -45,8 +44,8 @@ iframe {
 ol, ul {
   margin-left: 56px;
   margin-top: 5px;
-  font-size: 16px;
-  width: 278px;
+  font-size: 18px;
+  width: 261px;
 }
 
 ul {
@@ -88,6 +87,7 @@ a:hover {
   height: 100px;
   margin-left: 20px;
   margin-top: 20px;
+  border-radius: 50%;
 }
 
 .row {
@@ -133,12 +133,19 @@ a:hover {
 
 .content {
   padding-top: 60px;
-  font-family: Roboto;
+  font-family: PoiretOne-Regular;
 }
 
 .picup {
   margin-top: 100px;
   padding-right: 40px;
+}
+
+.back {
+  margin-block-start: auto;
+  margin-block-end: 1%;
+  margin-left: auto;
+  transform: rotate(-90deg);
 }
 
 .tags {
@@ -189,7 +196,11 @@ a:hover {
 .cross img {
   width: 24px;
   height: 24px;
-  top: 120px;
-  right: calc(33% - 24px);
+  top: 2%;
+  right: 1%;
   position: absolute;
+}
+
+.goup {
+  cursor: pointer;
 }
